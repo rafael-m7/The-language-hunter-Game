@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default Local Group
+  m_GUID: 1332e68d326d89148a816edc085df91e
+  m_SerializeEntries:
+  - m_GUID: 10c079ce46cf6478d84bdbca3f3f808b
+    m_Address: Assets/assets/prefabs/Nature/Tree.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f3e8265d4a67a9feb01181e2b72e814
+    m_Address: Assets/assets/prefabs/Nature/Tree (4).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b3f0d85673835638bf2b0ec54713ae1
+    m_Address: Assets/assets/prefabs/Nature/Tree (2).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d086640b4f72d6349bacd9b2fc3224cb
+    m_Address: Assets/assets/prefabs/Nature/Tree (1).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcd001b7483534191a5f6f0dd3b4b74b
+    m_Address: Assets/assets/prefabs/Nature/Tree (3).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 43cb3933674b5040eb90e19956e06845, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3f56e39c78804dd4485e52bc3d775aba, type: 2}
+    - {fileID: 11400000, guid: e86ed2c5c435fd1798a56f7df67654d3, type: 2}
