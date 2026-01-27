@@ -20,6 +20,10 @@ public class Player : BasicEntity
     private PlayerAction actions;
     //
 
+    //Get animator component
+    [SerializeField] private Animator AnimPlayer;
+
+
     private GameObject GetCamera;
     protected Vector3 GetCameraPosition = Vector3.zero;
     protected Quaternion GetCameraRotation;
@@ -34,12 +38,13 @@ public class Player : BasicEntity
         return new Vector3(OffSetX, OffSetY, OffSetZ);
     }
 
-
     void OnEnable()
     {
         actions.Enable();
 
         SetCamera();
+
+        print(AnimPlayer);
 
         GetCameraPosition = new Vector3(-20,2,-20);
 
@@ -51,7 +56,12 @@ public class Player : BasicEntity
             GetCamera.transform.position = GetCameraPosition;
             GetCamera.transform.rotation = GetCameraRotation;
         }
+
         GetPlayerPosition = transform;
+        
+        OnPlayerMoving += () => SetAnimationWalking(AnimPlayer, true);
+
+        OnPlayerIdle += () => SetAnimationWalking(AnimPlayer, false);
     }
 
     void OnDisable()
@@ -59,19 +69,19 @@ public class Player : BasicEntity
         actions.Disable();
     }
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         actions = new PlayerAction();
 
         ID_ENTITY = GetIDObject.ID_;
-
-        print(ID_ENTITY);
     }
 
     void LateUpdate()
     {
         FollowCamera();
-        PlayerMoving(4);
+        PlayerMoving(4);        
     }
 
     private void SetCamera()
@@ -108,13 +118,13 @@ public class Player : BasicEntity
 
         transform.Translate(Moving.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Moving == Vector3.zero)
+        if(Moving.sqrMagnitude > 0.01f)
         {
-            OnPlayerIdle?.Invoke();
+            OnPlayerMoving?.Invoke();
         }
         else
         {
-            OnPlayerMoving?.Invoke();
+            OnPlayerIdle?.Invoke();
         }
 
         return Moving;

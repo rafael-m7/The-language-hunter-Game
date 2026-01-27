@@ -191,9 +191,9 @@ GameObject:
   m_Component:
   - component: {fileID: 228920330}
   - component: {fileID: 228920331}
-  - component: {fileID: 228920332}
   - component: {fileID: 228920334}
   - component: {fileID: 228920333}
+  - component: {fileID: 228920335}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -279,23 +279,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!111 &228920332
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228920329}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 89786c31cb92bac4b9b168a69331eb0f, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 89786c31cb92bac4b9b168a69331eb0f, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!114 &228920333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +304,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   GetIDObject: {fileID: 11400000, guid: 7d5beeac51d430d9c9d2d64f637486e0, type: 2}
+  AnimPlayer: {fileID: 228920335}
+--- !u!95 &228920335
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228920329}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7c9131c697639c259ef957ad8c9533e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,9 +1312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f9cacfde9747cfa9d5aee28aef6741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAnimationController
-  Anims:
-  - {fileID: 228920332}
-  player: {fileID: 0}
 --- !u!4 &1592624126
 Transform:
   m_ObjectHideFlags: 0
