@@ -1,16 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// The basic NPC (interaction, dialogues, etc.)
+/// </summary>
 public class NPC : BasicEntity
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //TODO Work on the NPC script after completing the enemy script
 }

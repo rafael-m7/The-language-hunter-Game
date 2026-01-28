@@ -27,7 +27,7 @@ public class Player : BasicEntity
     //Get animator component
     [SerializeField] private Animator AnimPlayer;
 
-
+    //Basic variables
     private GameObject GetCamera;
     protected Vector3 GetCameraPosition = Vector3.zero;
     protected Quaternion GetCameraRotation;
@@ -37,6 +37,7 @@ public class Player : BasicEntity
     protected float OffSetX = 0;
     protected float OffSetY = 1.5f;
     protected float OffSetZ = -5.5f;
+    //
     protected Vector3 OffSet()
     {
         return new Vector3(OffSetX, OffSetY, OffSetZ);
@@ -88,6 +89,8 @@ public class Player : BasicEntity
         PlayerMoving(4);        
     }
 
+    #region Camera & Player
+
     private void SetCamera()
     {
         ID_Cam = Random.Range(0,10000);
@@ -133,4 +136,6 @@ public class Player : BasicEntity
 
         return Moving;
     }
+
+    #endregion
 }

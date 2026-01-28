@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// A Basic class for all living-entitys
+/// </summary>
 public class BasicEntity : MonoBehaviour
 {
     public string ID_ENTITY {get; set;}
