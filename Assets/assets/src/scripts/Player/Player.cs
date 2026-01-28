@@ -5,6 +5,10 @@ public delegate void PlayerEventHandler();
 
 public class Player : BasicEntity
 {
+    //Basic Entity Set
+    private int health = 100;
+    // 
+
     //ID
     [SerializeField] private ID GetIDObject; 
     //

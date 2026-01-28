@@ -5,6 +5,8 @@ public class BasicEntity : MonoBehaviour
 {
     public string ID_ENTITY {get; set;}
 
+    private int Health {get; set;}
+
     protected Dictionary<string, int> HashAnimations = new Dictionary<string, int>();
 
     protected virtual void Awake()
@@ -12,6 +14,8 @@ public class BasicEntity : MonoBehaviour
 
         RegisterAnimation("OnMoving");
         RegisterAnimation("OnIdle");
+
+        Health = 100;
     }
 
     protected void RegisterAnimation(string name)
